@@ -1,0 +1,27 @@
+<h2>Show all Employee</h2>
+<br>
+<style>
+        th
+       {
+           background-color:rgb(103, 88, 114);
+           color:black;
+       }
+       </style>
+<table border="10">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee name</th>
+        <th>Employee salary</th>
+        <th>Employee department</th>
+        <th>Action</th>
+
+    </tr>
+
+    <tr *ngFor="let data of empAll; let i=index">
+        <td>{{data.empId}}</td>
+        <td>{{data.empName| uppercase}}</td>
+        <td>{{data.empSal| currency:'INR':true}}</td>
+        <td>{{data.empDep}}</td>
+        <td><input type="button" value="Delete" class="btn btn-info" (click)="delete(i)"/></td>
+    </tr>
+</table>

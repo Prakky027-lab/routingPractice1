@@ -1,0 +1,24 @@
+<h2>Add Employee</h2>
+<table>
+    <tr>
+        <td>Employee Id</td>
+        <td><input type="text"  [(ngModel)]="empId"/></td>  <!--Event Binding because we jst want take value from html and not reflect it bck-->
+    </tr>
+    <tr>
+        <td>Employee Name</td>
+        <td><input type="text" [(ngModel)]="empName"/></td>
+    </tr>
+
+    <tr>
+        <td>Employee Salary</td>
+        <td><input type="text" [(ngModel)]="empSal"/></td>
+    </tr>
+
+    <tr>
+        <td>Employee Department</td>
+        <td><input type="text" [(ngModel)]="empDep"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="ADD Employee" (click)="add()"/></td>
+    </tr>
+</table>

@@ -1,0 +1,25 @@
+<h3>Search employee</h3>
+<p>Enter id to be searched</p>
+<input type="text"  [(ngModel)]="empId1"/>
+<input type="button" value="Search Employee" (click)="search()"/><br>
+<div *ngIf="status">
+<h2>Show all Employee</h2>
+<br>
+
+<table border="10">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee name</th>
+        <th>Employee salary</th>
+        <th>Employee department</th>
+
+    </tr>
+
+    <tr *ngFor="let data of arr2; let i=index">
+        <td>{{data.empId}}</td>
+        <td>{{data.empName| uppercase}}</td>
+        <td>{{data.empSal| currency:'INR':true}}</td>
+        <td>{{data.empDep}}</td>
+    </tr>
+</table>
+</div>
